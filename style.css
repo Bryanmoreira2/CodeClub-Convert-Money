@@ -1,3 +1,4 @@
+/* Reseta margens e preenchimentos, define box-sizing e fonte padrão */
 * {
     margin: 0;
     padding: 0;
@@ -8,54 +9,68 @@
     line-height: 18px;
 }
 
+/* Estilo geral do corpo da página */
 body {
-    background-color: rgb(212, 212, 212);
+    background-color: rgb(0, 0, 0);
+    /* Cor de fundo */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    /* Centraliza verticalmente */
 }
 
+/* Estilo do contêiner principal */
 .conteundo {
     width: 375px;
-    background-color: #b5ddb1;
-    
-
+    background-color: #007a37;
+    /* Cor de fundo */
+    border-radius: 25px;
+    /* Cantos arredondados */
 }
 
+/* Estilo do cabeçalho */
 header {
-    background-color: #097914;
+    background-color: #012df1;
+    /* Cor de fundo */
     height: 66px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 25px 25px 0 0;
+    /* Cantos arredondados no topo */
 }
 
-
+/* Estilo do título */
 h1 {
     font-size: 24px;
     font-weight: 400;
-    color: #F4F4F4;
-   
+    color: #ffffff;
+    /* Cor do texto */
 }
 
+/* Estilo do conteúdo principal */
 main {
     padding: 24px;
 }
 
+/* Estilo dos rótulos */
 label {
     font-size: 14px;
     font-weight: 400;
     text-align: left;
-    color: #777777;
-
-
+    color: #ffffff;
+    /* Cor do texto */
 }
 
+/* Estilo dos campos de seleção */
 select {
     background: #FfFfFf;
+    /* Cor de fundo */
     border-radius: 4% 0px 0px 0px;
+    /* Bordas arredondadas */
     border: 1px solid #BBBBBB;
+    /* Borda */
     height: 48px;
     display: block;
     width: 100%;
@@ -64,17 +79,19 @@ select {
     appearance: none;
     padding-left: 16px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    /* Sombra */
     margin-top: 6px;
     margin-bottom: 24px;
-
-
-
 }
 
+/* Estilo dos campos de entrada */
 input {
     background: #FfFfFf;
+    /* Cor de fundo */
     border-radius: 4% 0px 0px 0px;
+    /* Bordas arredondadas */
     border: 1px solid #BBBBBB;
+    /* Borda */
     height: 48px;
     display: block;
     width: 100%;
@@ -82,14 +99,17 @@ input {
     font-size: 16px;
     font-weight: 700;
     text-align: left;
-
 }
 
+/* Estilo dos botões */
 button {
-    background-color: #097914;
+    background-color: #012df1;
+    /* Cor de fundo */
     border-radius: 25px;
+    /* Cantos arredondados */
     height: 48px;
     color: #F4F4F4;
+    /* Cor do texto */
     cursor: pointer;
     font-size: 16px;
     font-weight: 700;
@@ -99,26 +119,31 @@ button {
     margin-bottom: 36px;
 }
 
+/* Estilo do botão ao passar o mouse */
 button:hover {
     opacity: 0.8;
-
-    
+    /* Efeito de transparência */
 }
 
+/* Estilo do botão ao clicar */
 button:active {
     opacity: 0.5;
+    /* Efeito de transparência */
 }
 
+/* Estilo da seção que contém os resultados */
 section {
-    border: 1px solid #097914;
+    border: 1px solid #012df1;
+    /* Borda */
     border-radius: 4px;
+    /* Bordas arredondadas */
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
-
 }
 
+/* Estilo das divs com bandeiras */
 .bandeiras1 {
     padding: 10px;
     display: flex;
@@ -127,17 +152,19 @@ section {
     gap: 3px;
 }
 
+/* Estilo dos textos das moedas */
 .texto {
     font-size: 14px;
     font-weight: 400;
-    color: #777777;
-
+    color: #012df1;
+    /* Cor do texto */
 }
 
+/* Estilo dos valores das moedas */
 .dindin {
-    color: #097914;
+    color: #012df1;
+    /* Cor do texto */
     font-family: Roboto;
     font-size: 20px;
     font-weight: 700;
-
 }

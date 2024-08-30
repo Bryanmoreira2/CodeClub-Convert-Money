@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Conecta-se ao Google Fonts para carregar fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Inclui o arquivo de estilos CSS -->
     <link rel="stylesheet" href="/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Inclui a fonte Roboto do Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
@@ -18,53 +19,51 @@
 <body>
     <div class="conteundo">
         <header>
-            <h1>
-                Convert Money
-            </h1>
+            <h1>Convert Money</h1> <!-- Título principal da página -->
         </header>
         <main>
+            <!-- Seletor para escolher a moeda de origem -->
             <label>Converter <b>de</b>
                 <select id="Converterde">
-                    <option>
-                        R$ Real brasileiro
-                    </option>
-                
+                    <option>R$ Real brasileiro</option>
                 </select>
             </label>
+            <!-- Seletor para escolher a moeda de destino -->
             <label>Converter <b>para</b>
                 <select id="seletordemoeda">
-                    <option>
-                        US$ Dólar americano
-                    </option>
-                    <option>
-                        € Euro
-                    </option>
-                    <option>
-                        Bitcoin
-                    </option>
+                    <option>US$ Dólar americano</option>
+                    <option>€ Euro</option>
+                    <option>Bitcoin</option>
                 </select>
             </label>
+            <!-- Campo para inserir o valor -->
             <label>Valor
                 <input id="inputvalor" placeholder="R$10.0000">
             </label>
+            <!-- Botão para iniciar a conversão -->
             <button id="buttonconvert" type="button"> Converter </button>
             <section>
+                <!-- Div para exibir a moeda de origem -->
                 <div class="bandeiras1">
-                    <img src="/img/brasil 2.png" alt="brasil" id="brasil">
+                    <img src="/ac/brasil 2.png" alt="brasil" id="brasil">
                     <p class="texto">Real</p>
                     <p class="dindin" id="realvalar">R$ 10.000,00</p>
                 </div>
 
-                <img class="seta" src="/img/Group.png" alt="flecha">
+                <!-- Imagem da seta indicando conversão -->
+                <img class="seta" src="/ac/Group.png" alt="flecha">
 
+                <!-- Div para exibir a moeda de destino -->
                 <div class="bandeiras1">
-                    <img src="/img/estados-unidos (1) 1.png" alt="eua" id="imagem">
+                    <img src="/ac/estados-unidos (1) 1.png" alt="eua" id="imagem">
                     <p class="texto" id="nomedamoeda">Dólar americano</p>
                     <p class="dindin" id="valarconvertido">US$ 2.000,00</p>
                 </div>
             </section>
         </main>
+    </div>
+    <!-- Inclui o script JavaScript -->
+    <script src="./scripts.js"></script>
 </body>
-<script src="./scripts.js"></script>
 
 </html>
