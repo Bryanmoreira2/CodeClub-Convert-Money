@@ -90,7 +90,7 @@ input {
     /* Cor de fundo */
     border-radius: 4% 0px 0px 0px;
     /* Bordas arredondadas */
-    border: 1px solid #BBBBBB;
+    border: 1px solid #ffffff;
     /* Borda */
     height: 48px;
     display: block;
@@ -108,7 +108,7 @@ button {
     border-radius: 25px;
     /* Cantos arredondados */
     height: 48px;
-    color: #F4F4F4;
+    color: #ffffff;
     /* Cor do texto */
     cursor: pointer;
     font-size: 16px;
