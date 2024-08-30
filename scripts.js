@@ -41,13 +41,13 @@ const changerCurrency = () => {
     // Atualiza nome e imagem com base na moeda selecionada
     if (seltor.value === '€ Euro') {
         nomeDaMoeda.innerHTML = 'Euro';
-        imagemBandeira.src = "/img/EURO.png";
+        imagemBandeira.src = "ac/EURO.png";
     } else if (seltor.value === 'US$ Dólar americano') {
         nomeDaMoeda.innerHTML = 'Dólar americano';
-        imagemBandeira.src = "/img/estados-unidos (1) 1.png";
+        imagemBandeira.src = "ac/estados-unidos (1) 1.png";
     } else if (seltor.value === 'Bitcoin') {
         nomeDaMoeda.innerHTML = 'Bitcoin';
-        imagemBandeira.src = "/img/BI.png";
+        imagemBandeira.src = "ac/BI.png";
     }
 
     convertValues();
