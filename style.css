@@ -12,33 +12,28 @@
 /* Estilo geral do corpo da página */
 body {
     background-color: rgb(0, 0, 0);
-    /* Cor de fundo */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* Centraliza verticalmente */
 }
 
 /* Estilo do contêiner principal */
 .conteundo {
-    width: 375px;
+    width: 100%;
+    max-width: 375px;
     background-color: #007a37;
-    /* Cor de fundo */
     border-radius: 25px;
-    /* Cantos arredondados */
 }
 
 /* Estilo do cabeçalho */
 header {
     background-color: #012df1;
-    /* Cor de fundo */
     height: 66px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 25px 25px 0 0;
-    /* Cantos arredondados no topo */
 }
 
 /* Estilo do título */
@@ -46,7 +41,6 @@ h1 {
     font-size: 24px;
     font-weight: 400;
     color: #ffffff;
-    /* Cor do texto */
 }
 
 /* Estilo do conteúdo principal */
@@ -60,17 +54,13 @@ label {
     font-weight: 400;
     text-align: left;
     color: #ffffff;
-    /* Cor do texto */
 }
 
 /* Estilo dos campos de seleção */
 select {
     background: #FfFfFf;
-    /* Cor de fundo */
     border-radius: 4% 0px 0px 0px;
-    /* Bordas arredondadas */
     border: 1px solid #BBBBBB;
-    /* Borda */
     height: 48px;
     display: block;
     width: 100%;
@@ -79,7 +69,6 @@ select {
     appearance: none;
     padding-left: 16px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    /* Sombra */
     margin-top: 6px;
     margin-bottom: 24px;
 }
@@ -87,11 +76,8 @@ select {
 /* Estilo dos campos de entrada */
 input {
     background: #FfFfFf;
-    /* Cor de fundo */
     border-radius: 4% 0px 0px 0px;
-    /* Bordas arredondadas */
     border: 1px solid #ffffff;
-    /* Borda */
     height: 48px;
     display: block;
     width: 100%;
@@ -104,12 +90,9 @@ input {
 /* Estilo dos botões */
 button {
     background-color: #012df1;
-    /* Cor de fundo */
     border-radius: 25px;
-    /* Cantos arredondados */
     height: 48px;
     color: #ffffff;
-    /* Cor do texto */
     cursor: pointer;
     font-size: 16px;
     font-weight: 700;
@@ -119,24 +102,18 @@ button {
     margin-bottom: 36px;
 }
 
-/* Estilo do botão ao passar o mouse */
 button:hover {
     opacity: 0.8;
-    /* Efeito de transparência */
 }
 
-/* Estilo do botão ao clicar */
 button:active {
     opacity: 0.5;
-    /* Efeito de transparência */
 }
 
 /* Estilo da seção que contém os resultados */
 section {
     border: 1px solid #012df1;
-    /* Borda */
     border-radius: 4px;
-    /* Bordas arredondadas */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -157,14 +134,37 @@ section {
     font-size: 14px;
     font-weight: 400;
     color: #012df1;
-    /* Cor do texto */
 }
 
 /* Estilo dos valores das moedas */
 .dindin {
     color: #012df1;
-    /* Cor do texto */
     font-family: Roboto;
     font-size: 20px;
     font-weight: 700;
+}
+
+/* Media query para iPhone 15 Pro */
+@media screen and (max-width: 430px) {
+    .conteundo {
+        padding: 10px;
+        border-radius: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    select, input, button {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    section {
+        gap: 10px;
+    }
+
+    .dindin {
+        font-size: 18px;
+    }
 }
