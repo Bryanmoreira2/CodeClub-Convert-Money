@@ -9,13 +9,15 @@ const convertValues = async () => {
     const volrReal = document.getElementById('realvalar');
     const volorconvertido = document.getElementById('valarconvertido');
 
+
     // Obtém taxas de câmbio da API
-    const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL")
+    const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL,ARS-BRL")
         .then(response => response.json());
 
-    const dolar = data.USDBRL.high;
-    const euro = data.EURBRL.high;
-    const bitcoin = data.BTCBRL.high;
+    const peso = data.ARSBRL.bid;
+    const dolar = data.USDBRL.bid;
+    const euro = data.EURBRL.bid;
+    const bitcoin = data.BTCBRL.bid;
 
     // Exibe valor em reais
     volrReal.innerHTML = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' })
@@ -28,6 +30,9 @@ const convertValues = async () => {
     } else if (seltor.value === '€ Euro') {
         volorconvertido.innerHTML = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' })
             .format(inputReais / euro);
+    } else if (seltor.value === '$ Peso argentino') {
+        volorconvertido.innerHTML = new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS' })
+            .format(inputReais / peso);
     } else if (seltor.value === 'Bitcoin') {
         volorconvertido.innerHTML = (inputReais / bitcoin).toFixed(3);
     }
@@ -38,17 +43,23 @@ const changerCurrency = () => {
     const nomeDaMoeda = document.getElementById("nomedamoeda");
     const imagemBandeira = document.getElementById('imagem');
 
-    // Atualiza nome e imagem com base na moeda selecionada
     if (seltor.value === '€ Euro') {
         nomeDaMoeda.innerHTML = 'Euro';
         imagemBandeira.src = "ac/EURO.png";
+
     } else if (seltor.value === 'US$ Dólar americano') {
         nomeDaMoeda.innerHTML = 'Dólar americano';
         imagemBandeira.src = "ac/estados-unidos (1) 1.png";
+
     } else if (seltor.value === 'Bitcoin') {
         nomeDaMoeda.innerHTML = 'Bitcoin';
         imagemBandeira.src = "ac/BI.png";
+
+    } else if (seltor.value === '$ Peso argentino') {
+        nomeDaMoeda.innerHTML = ' Peso argentino';
+        imagemBandeira.src = "ac/A.png";
     }
+    
 
     convertValues();
 };
